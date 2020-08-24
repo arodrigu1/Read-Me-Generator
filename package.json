@@ -4,7 +4,8 @@
   "description": "Homework 9",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^0.20.0",
+    "inquirer": "^7.3.3"
   },
   "devDependencies": {},
   "scripts": {
