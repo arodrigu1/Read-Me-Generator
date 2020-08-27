@@ -1,10 +1,12 @@
 
-# test
+function generateMarkdown(data, githubInfo) {
+  return `
+# ${data.title}
 
 ## Description 
 ================================
 
-test
+${data.description}
 
 ## Table of contents
 ================================
@@ -19,35 +21,39 @@ test
 ## Installation
 =================================
 
-        undefined
+        ${data.installation}
 
 ## Usage
 ================================
 
-test
+${data.usage}
 
 
 ## Contributors
 ================================
 
-test
+${data.contributors}
 
 ## Test
 ================================
 
-undefined
+${data.test}
 
 
 ## Repository
 =================================
 
-- [Project Repo](test)
+- [Project Repo](${data.repo})
 
 ## GitHub
 ==================================
 
 
-- null
-- [GitHub Profile](https://github.com/arodrigu1)
+- ${githubInfo.name}
+- [GitHub Profile](${githubInfo.profile})
 
 
+`;
+}
+
+module.exports = generateMarkdown;

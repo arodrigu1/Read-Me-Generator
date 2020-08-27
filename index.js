@@ -2,39 +2,59 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
 const axios = require("axios");
-const generateHTML = require("./generateHTML");
+const generate = require('./generateMarkdown');
 
 const questions = [
   {
-      type: "input",
-      name: "title",
-      message: "What is your project title?"
-  },
-  {
-      type: "input",
-      name: "description",
-      message: "Please provide your project's description"
-  },
-  {
-      type: "input",
-      name: "licence",
-      message: "Please provide the project licence or your badge link"
-  },
-  {
-      type: "input",
-      name: "test",
-      message: "Please provide the project tests"
-  },
-  {
-      type: "input",
-      name: "username",
-      message: "What is your github user name?"
-  },
-  {
-      type: "input",
-      name: "repo",
-      message: "What is your repo link?"
-  },
+    type: "input",
+    name: "title",
+    message: "Enter project title."
+},
+{
+    type: "input",
+    name: "description",
+    message: "Enter project description."
+},
+{
+    type: "input",
+    name: "contents",
+    message: "Enter Table of Contents"
+},
+{
+    type: "input",
+    name: "intallation",
+    message: "Enter installation steps."
+},
+{
+    type: "input",
+    name: "usage",
+    message: "Enter project usage."
+},
+{
+    type:"input",
+    name: "license",
+    message:"Enter licensing information"
+},
+{
+    type: "input",
+    name: "contributors",
+    message: "Enter contributors."
+},
+{
+    type: "input",
+    name: "tests",
+    message: "Enter tests."
+},
+{
+    type: "input",
+    name: "username",
+    message: "What is your github user name?"
+},
+{
+    type: "input",
+    name: "repo",
+    message: "What is your repo link?"
+},
 ];
 
 inquirer
